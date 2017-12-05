@@ -10,4 +10,8 @@ The target platform needed to successfully run this project includes the followi
 
 Once the TP set, this repository and the Eclipse January one can be pulled and the project should compile and run.
 
+The steps followed to create the OSGi ready bundles were found here: https://wadeawalker.wordpress.com/2010/10/09/tutorial-a-cross-platform-workbench-program-using-java-opengl-and-eclipse/
+
+The native libraries (JOGL) and the JZY3d jars have their own licensing as specified in each project. The projects created in this repository are under the Eclipse License Version 1.0.
+
 

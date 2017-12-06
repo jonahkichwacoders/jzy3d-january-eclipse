@@ -5,7 +5,7 @@
       <children xsi:type="advanced:Perspective" xmi:id="_6wlLkcgZEeSyMNYR5xypkQ" elementId="org.dawnsci.january.to.jzy3d.perspective.sample">
         <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="org.dawnsci.january.to.jzy3d.partsashcontainer.sample">
           <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="org.dawnsci.january.to.jzy3d.partstack.sample">
-            <children xsi:type="basic:Part" xmi:id="_D6K3kNkHEeeH6_hW42-xtQ" elementId="org.dawnsci.january.to.jzy3d.part.january" contributionURI="bundleclass://org.dawnsci.january.to.jzy3d/org.dawnsci.january.to.jzy3d.parts.JZY3DPart" label="January Part"/>
+            <children xsi:type="basic:Part" xmi:id="_D6K3kNkHEeeH6_hW42-xtQ" elementId="org.dawnsci.january.to.jzy3d.part.january" contributionURI="bundleclass://org.dawnsci.january.to.jzy3d/org.dawnsci.january.to.jzy3d.parts.JZY3DPart" label="January to JZY3d Example"/>
           </children>
         </children>
       </children>
@@ -13,7 +13,6 @@
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_6wlLisgZEeSyMNYR5xypkQ" elementId="file" label="File">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLi8gZEeSyMNYR5xypkQ" elementId="org.dawnsci.january.to.jzy3d.handleditem.file.open" label="Open" iconURI="platform:/plugin/org.dawnsci.january.to.jzy3d/icons/sample.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjMgZEeSyMNYR5xypkQ" elementId="org.dawnsci.january.to.jzy3d.handleditem.save" label="Save" iconURI="platform:/plugin/org.dawnsci.january.to.jzy3d/icons/save_edit.png"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjcgZEeSyMNYR5xypkQ" elementId="org.dawnsci.january.to.jzy3d.handleditem.quit" label="Quit" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_6wlLjsgZEeSyMNYR5xypkQ" elementId="help" label="Help">

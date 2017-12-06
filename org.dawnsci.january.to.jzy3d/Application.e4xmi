@@ -22,7 +22,6 @@
     <trimBars xmi:id="_6wlLlcgZEeSyMNYR5xypkQ" elementId="org.dawnsci.january.to.jzy3d.trimbar.top">
       <children xsi:type="menu:ToolBar" xmi:id="_6wlLlsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.toolbar">
         <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLl8gZEeSyMNYR5xypkQ" elementId="org.dawnsci.january.to.jzy3d.handleditem.trimbar.top.open" iconURI="platform:/plugin/org.dawnsci.january.to.jzy3d/icons/sample.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLmMgZEeSyMNYR5xypkQ" elementId="org.dawnsci.january.to.jzy3d.handleditem.trimbar.top.save" iconURI="platform:/plugin/org.dawnsci.january.to.jzy3d/icons/save_edit.png"/>
       </children>
     </trimBars>
   </children>

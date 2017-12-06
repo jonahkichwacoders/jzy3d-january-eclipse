@@ -14,6 +14,9 @@ The steps followed to create the OSGi ready bundles were found here: https://wad
 
 The code used to build a surface given a double array data comes from : https://stackoverflow.com/questions/8338215/build-a-3d-surface-plot-using-xyz-coordinates-with-jzy3d
 
-The native libraries (JOGL) and the JZY3d jars have their own licensing as specified in each project. The projects created in this repository are under the Eclipse License Version 1.0.
+The [diffpattern.jpg](https://github.com/belkassaby/jzy3d-january-eclipse/blob/master/org.dawnsci.january.to.jzy3d/data/diffpattern.jpg) image is the "diffraction pattern of a circular aperture which disburses the light from a point source of light, such as a star, into a bull's-eye shaped image which is known as an Airy disk". (http://www.goldastro.com/goldfocus/resolving_power.php)
 
+The [diffpattern2.jpg](https://github.com/belkassaby/jzy3d-january-eclipse/blob/master/org.dawnsci.january.to.jzy3d/data/diffpattern2.jpg) image  is a Selected Area Diffraction (SAD) pattern found on https://sites.google.com/site/selectedareadiffraction/
+
+The native libraries (JOGL) and the JZY3d jars have their own licensing as specified in each project. The projects created in this repository are under the Eclipse License Version 1.0.
 

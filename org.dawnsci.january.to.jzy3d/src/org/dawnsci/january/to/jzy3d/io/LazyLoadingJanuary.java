@@ -18,6 +18,12 @@ import org.eclipse.january.io.ILazyLoader;
 
 public class LazyLoadingJanuary {
 
+	/**
+	 * Taken from example in January IO LazyLoadingExample
+	 *
+	 * @param file
+	 * @return lazy dataset
+	 */
 	public static ILazyDataset createFromFile(final File file) {
 		if (!file.canRead()) {
 			throw new IllegalArgumentException("File '" + file + "' does not exist or is not readable");

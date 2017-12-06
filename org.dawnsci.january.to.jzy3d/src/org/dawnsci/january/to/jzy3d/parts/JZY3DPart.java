@@ -64,25 +64,6 @@ public class JZY3DPart {
 		drawSurface(surface, parent);
 	}
 
-	private void drawSurface(Shape surface, Composite parent) {
-		surface.setColorMapper(new ColorMapper(new ColorMapRBG(), surface.getBounds().getZmin(),
-				surface.getBounds().getZmax(), new Color(1, 1, 1, .5f)));
-		surface.setFaceDisplayed(true);
-		surface.setWireframeDisplayed(false);
-
-		// Create a chart
-		Chart chart = AWTChartComponentFactory.chart(Quality.Advanced, "awt");
-		chart.getScene().getGraph().add(surface);
-
-		Settings.getInstance().setHardwareAccelerated(true);
-
-		parent.setLayout(new FillLayout());
-		chart.addKeyboardCameraController();
-		chart.addKeyboardScreenshotController();
-		chart.addMouseCameraController();
-		Bridge.adapt(parent, (Component) chart.getCanvas());
-	}
-
 	/*
 	 * @return surface given a file image
 	 */
@@ -105,7 +86,8 @@ public class JZY3DPart {
 				distDataProp[i][j] = data.getDouble(i, j);
 			}
 		}
-		// create the list of polygons
+		// create the list of polygons: found on
+		// https://stackoverflow.com/questions/8338215/build-a-3d-surface-plot-using-xyz-coordinates-with-jzy3d
 		List<Polygon> polygons = new ArrayList<Polygon>();
 		for (int i = 0; i < distDataProp.length - 1; i++) {
 			for (int j = 0; j < distDataProp[i].length - 1; j++) {
@@ -119,6 +101,31 @@ public class JZY3DPart {
 		}
 		// create a shape with the polygons
 		return new Shape(polygons);
+	}
+
+	/**
+	 * Draw a surface on a JZy3d chart inside of a SWT Composite
+	 *
+	 * @param surface
+	 * @param parent
+	 */
+	private void drawSurface(Shape surface, Composite parent) {
+		surface.setColorMapper(new ColorMapper(new ColorMapRBG(), surface.getBounds().getZmin(),
+				surface.getBounds().getZmax(), new Color(1, 1, 1, .5f)));
+		surface.setFaceDisplayed(true);
+		surface.setWireframeDisplayed(false);
+
+		// Create a chart
+		Chart chart = AWTChartComponentFactory.chart(Quality.Advanced, "awt");
+		chart.getScene().getGraph().add(surface);
+
+		Settings.getInstance().setHardwareAccelerated(true);
+
+		parent.setLayout(new FillLayout());
+		chart.addKeyboardCameraController();
+		chart.addKeyboardScreenshotController();
+		chart.addMouseCameraController();
+		Bridge.adapt(parent, (Component) chart.getCanvas());
 	}
 
 	@Focus

@@ -12,6 +12,8 @@ Once the TP set, this repository and the Eclipse January one can be pulled and t
 
 The steps followed to create the OSGi ready bundles were found here: https://wadeawalker.wordpress.com/2010/10/09/tutorial-a-cross-platform-workbench-program-using-java-opengl-and-eclipse/
 
+The code used to build a surface given a double array data comes from : https://stackoverflow.com/questions/8338215/build-a-3d-surface-plot-using-xyz-coordinates-with-jzy3d
+
 The native libraries (JOGL) and the JZY3d jars have their own licensing as specified in each project. The projects created in this repository are under the Eclipse License Version 1.0.
 
 

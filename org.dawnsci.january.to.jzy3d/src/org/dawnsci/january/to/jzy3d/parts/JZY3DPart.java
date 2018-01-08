@@ -55,7 +55,8 @@ public class JZY3DPart {
 //			filename = dialog.open();
 //		}
 		String bundleLocation = Activator.getContext().getBundle().getLocation();
-		bundleLocation = bundleLocation.split("initial@reference:file:")[1];
+		String[] split = bundleLocation.split("file:");
+		bundleLocation = split[1];
 		filename = bundleLocation + "data/diffpattern2.jpg";
 		Shape surface = getSurfaceFromImage(filename);
 		drawSurface(surface, parent);

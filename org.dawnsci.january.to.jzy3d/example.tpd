@@ -11,6 +11,9 @@
  *******************************************************************************/
 target "JZY3D" with source requirements
 
+location "http://download.eclipse.org/january//builds/january-master/latest/repository/" january-master {
+	org.eclipse.january lazy
+}
 
 location "http://download.eclipse.org/tools/orbit/downloads/drops/R20170818183741/repository" eclipse-orbit-oxygen-sr1 {
 
@@ -26,13 +29,13 @@ location "http://download.eclipse.org/tools/orbit/downloads/drops/R2017081818374
 
 // To speed up the build, pull the platform from its own site. version specific and not the EPP site
 
-location "http://download.eclipse.org/eclipse/updates/4.6/R-4.6.2-201611241400/" a {
+location "http://download.eclipse.org/eclipse/updates/4.6/R-4.6.2-201611241400/" eclipse-neon {
 	org.eclipse.equinox.launcher lazy
 	org.eclipse.core.runtime.feature.feature.group lazy
 	org.eclipse.sdk lazy
 }
 
-location "file:///scratch/diamond/jzy3d/git/ebr/releng/p2/repository/target/repository" b {
+location "file:///scratch/diamond/jzy3d/git/ebr/releng/p2/repository/target/repository" local-ebr-repo {
 	org.jzy3d.api.ebr lazy
 	org.jzy3d.swt.ebr lazy
 	org.jzy3d.jdt.core.ebr lazy

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="JZY3D" sequenceNumber="1515511961">
+<target name="JZY3D" sequenceNumber="1515514013">
   <locations>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.january" version="0.0.0"/>
+      <repository id="january-master" location="http://download.eclipse.org/january//builds/january-master/latest/repository/"/>
+    </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.slf4j.api" version="1.7.2.v20121108-1250"/>
       <unit id="org.apache.commons.math3" version="3.5.0.v20160301-1110"/>
@@ -18,7 +22,7 @@
       <unit id="org.eclipse.equinox.launcher" version="0.0.0"/>
       <unit id="org.eclipse.core.runtime.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sdk" version="0.0.0"/>
-      <repository id="a" location="http://download.eclipse.org/eclipse/updates/4.6/R-4.6.2-201611241400/"/>
+      <repository id="eclipse-neon" location="http://download.eclipse.org/eclipse/updates/4.6/R-4.6.2-201611241400/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.jzy3d.api.ebr" version="0.0.0"/>
@@ -30,7 +34,7 @@
       <unit id="org.jogamp.jogl.natives-macosx-universal.ebr" version="0.0.0"/>
       <unit id="org.jogamp.jogl.natives-windows-amd64.ebr" version="0.0.0"/>
       <unit id="org.jogamp.jogl.natives-windows-i586.ebr" version="0.0.0"/>
-      <repository id="b" location="file:///scratch/diamond/jzy3d/git/ebr/releng/p2/repository/target/repository"/>
+      <repository id="local-ebr-repo" location="file:///scratch/diamond/jzy3d/git/ebr/releng/p2/repository/target/repository"/>
     </location>
   </locations>
 </target>

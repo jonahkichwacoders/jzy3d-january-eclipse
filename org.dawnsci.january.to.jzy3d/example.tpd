@@ -31,6 +31,7 @@ location "http://download.eclipse.org/tools/orbit/downloads/drops/R2017081818374
 
 location "http://download.eclipse.org/eclipse/updates/4.6/R-4.6.2-201611241400/" eclipse-neon {
 	org.eclipse.equinox.launcher lazy
+	org.eclipse.equinox.event lazy
 	org.eclipse.core.runtime.feature.feature.group lazy
 	org.eclipse.sdk lazy
 }

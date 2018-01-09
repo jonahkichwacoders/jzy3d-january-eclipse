@@ -10,6 +10,10 @@ package org.dawnsci.january.to.jzy3d.parts;
 
 import java.awt.Component;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +21,9 @@ import javax.annotation.PostConstruct;
 
 import org.dawnsci.january.to.jzy3d.Activator;
 import org.dawnsci.january.to.jzy3d.io.LazyLoadingJanuary;
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.URIUtil;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.january.DatasetException;
 import org.eclipse.january.dataset.IDataset;
@@ -49,16 +56,21 @@ public class JZY3DPart {
 		this.parent = parent;
 		parent.setLayout(new GridLayout(1, false));
 
-//		if (filename == null) {
-//			Shell shell = Display.getDefault().getActiveShell();
-//			FileDialog dialog = new FileDialog(shell);
-//			filename = dialog.open();
-//		}
-		String bundleLocation = Activator.getContext().getBundle().getLocation();
-		bundleLocation = bundleLocation.split("initial@reference:file:")[1];
-		filename = bundleLocation + "data/diffpattern2.jpg";
-		Shape surface = getSurfaceFromImage(filename);
-		drawSurface(surface, parent);
+		// if (filename == null) {
+		// Shell shell = Display.getDefault().getActiveShell();
+		// FileDialog dialog = new FileDialog(shell);
+		// filename = dialog.open();
+		// }
+		URL url = FileLocator.find(Activator.getContext().getBundle(), new Path("data/diffpattern2.jpg"), null);
+		try {
+			url = FileLocator.toFileURL(url);
+			filename = URIUtil.toFile(URIUtil.toURI(url)).toString();
+			Shape surface = getSurfaceFromImage(filename);
+			drawSurface(surface, parent);
+		} catch (IOException | URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/*
@@ -68,7 +80,7 @@ public class JZY3DPart {
 		// get the lazy data from the image file
 		ILazyDataset lazyData = LazyLoadingJanuary.createFromFile(new File(fileName));
 		int[] shape = lazyData.getShape();
-		SliceND ndSlice = new SliceND(shape, new int[] {0, 0}, new int[] {shape[0], shape[1]}, null);
+		SliceND ndSlice = new SliceND(shape, new int[] { 0, 0 }, new int[] { shape[0], shape[1] }, null);
 		IDataset data = null;
 		try {
 			data = lazyData.getSlice(null, ndSlice);

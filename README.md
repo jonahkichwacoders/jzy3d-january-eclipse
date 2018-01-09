@@ -1,7 +1,7 @@
 # jzy3d-january-eclipse
 The JZY3D graphical library (https://github.com/jzy3d) and the latest released JOGL/Gluegen libraries have been bundled in OSGi-ready plugins and fragments using the Eclipse EBR project. A test project (org.dawnsci.jzy3d.to.january) is available to preview a diffraction image loaded using Eclipse January (https://github.com/eclipse/january) as a surface in a JZY3d chart shown inside of an Eclipse 4 part component.
 
-The target platform needed to successfully run this project are in the example.tpd. *at time of writing bintray is not working, so download the EBR zip from https://www.dropbox.com/sh/zlyswbf6odkv3ao/AAC2bmy7gkapUYkZuv6jkQ6ta?dl=0*
+The target platform needed to successfully run this project is in the example.tpd (or example.target if you prefer).
 
 Once the TP set the project should compile and run.
 

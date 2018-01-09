@@ -35,7 +35,7 @@ location "http://download.eclipse.org/eclipse/updates/4.6/R-4.6.2-201611241400/"
 	org.eclipse.sdk lazy
 }
 
-location "file:/C:/data/Clients/diamond/jzy3d/ebr-I201801091531-repo" local-ebr-repo {
+location "https://jonahkichwacoders.github.io/jzy3d-january-eclipse/repository/" local-ebr-repo {
 	org.jzy3d.api.ebr lazy
 	org.jzy3d.swt.ebr lazy
 	org.jzy3d.jdt.core.ebr lazy
